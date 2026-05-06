@@ -12,8 +12,34 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: 'Acentra - Soluciones Integrales',
-  description: 'Optimizamos y escalamos empresas con soluciones corporativas de élite en contabilidad, software y recursos humanos.',
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'https://acentraperu.com'),
+  title: {
+    default: 'Acentra - Soluciones Corporativas de Élite',
+    template: '%s | Acentra'
+  },
+  description: 'Especialistas en Contabilidad NIIF, Software a Medida con IA y Gestión de Planillas para empresas que buscan escala y cumplimiento impecable.',
+  keywords: ['contabilidad niif', 'software a medida', 'recursos humanos', 'outsourcing contable', 'acentra peru'],
+  authors: [{ name: 'Acentra Solutions' }],
+  creator: 'Acentra Solutions',
+  publisher: 'Acentra Solutions',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    title: 'Acentra - Soluciones Corporativas de Élite',
+    description: 'Optimizamos y escalamos empresas con soluciones corporativas de élite.',
+    url: 'https://acentraperu.com',
+    siteName: 'Acentra',
+    locale: 'es_PE',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Acentra - Soluciones Corporativas de Élite',
+    description: 'Optimizamos y escalamos empresas con soluciones corporativas de élite.',
+  },
   icons: {
     icon: '/img/acentra/preloader.png',
   },
