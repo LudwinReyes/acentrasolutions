@@ -13,15 +13,17 @@ export async function POST(request: Request) {
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: Number(process.env.SMTP_PORT),
-      secure: process.env.SMTP_SECURE === 'true', // true for 465, false for other ports
+      secure: process.env.SMTP_SECURE === 'true',
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
       },
+      // Added for port 587 compatibility
+      requireTLS: Number(process.env.SMTP_PORT) === 587,
     });
 
     const mailOptions = {
-      from: `"Acentra Web" <${process.env.SMTP_USER}>`, // Use the authenticated email as sender
+      from: `"Acentra Web" <${process.env.CONTACT_RECEIVER_EMAIL || 'contacto@acentraperu.com'}>`, 
       to: process.env.CONTACT_RECEIVER_EMAIL || 'contacto@acentraperu.com',
       replyTo: email,
       subject: `Nueva solicitud de diagnóstico de ${nombre} - ${empresa || 'Empresa no especificada'}`,
@@ -76,8 +78,11 @@ export async function POST(request: Request) {
     console.log('Message sent: %s', info.messageId);
 
     return NextResponse.json({ success: true, message: 'Email enviado correctamente' }, { status: 200 });
-  } catch (error) {
+  } catch (error: any) {
     console.error('Error enviando email:', error);
-    return NextResponse.json({ error: 'Error al enviar el email' }, { status: 500 });
+    return NextResponse.json({ 
+      error: 'Error al enviar el email',
+      message: error.message || 'Error desconocido'
+    }, { status: 500 });
   }
 }
