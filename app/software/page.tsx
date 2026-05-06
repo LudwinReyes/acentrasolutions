@@ -6,6 +6,13 @@ import Link from "next/link";
 import { ArrowLeft, Code2, Cpu, Database, Laptop, LayoutDashboard, MonitorSmartphone, Share2, ShoppingCart } from "lucide-react";
 import MagneticFooter from "@/components/home/MagneticFooter";
 import { techStagger, techCardEntry, typewriterStagger, typewriterChar, use3DTilt } from "@/animations/techMotion";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Desarrollo de Software y Transformación Digital | Acentra',
+  description: 'Desarrollo de software a medida, e-commerce, integración de APIs y soluciones con IA. Transformamos tu empresa con ingeniería de vanguardia.',
+  keywords: ['desarrollo de software', 'transformacion digital', 'ecommerce peru', 'inteligencia artificial', 'crm implementation'],
+};
 
 const SOFTWARE_SERVICES = [
   {

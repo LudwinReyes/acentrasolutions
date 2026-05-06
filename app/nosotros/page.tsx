@@ -6,15 +6,22 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import MagneticFooter from "@/components/home/MagneticFooter";
-import {
-  aboutHeaderStagger,
-  aboutWordReveal,
-  textSlideRight,
-  imageSlideLeft,
-  pillStagger,
+import { 
+  aboutHeaderStagger, 
+  aboutWordReveal, 
+  textSlideRight, 
+  imageSlideLeft, 
+  pillStagger, 
   pillReveal,
   useAboutParallax
 } from "@/animations/aboutMotion";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Sobre Nosotros | Acentra',
+  description: 'Conoce la filosofía, metodología y liderazgo de Acentra. Expertos en consultoría corporativa de alto impacto liderados por Ibssen Reyes.',
+  keywords: ['ibssen reyes', 'filosofia corporativa', 'metodologia acentra', 'consultoria elite peru'],
+};
 
 const VALUES = ["Innovación", "Precisión Legal", "Confianza Absoluta", "Excelencia"];
 

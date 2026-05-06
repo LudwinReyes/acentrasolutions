@@ -14,6 +14,13 @@ import {
   pillRevealLeft, 
   pillRevealRight 
 } from "@/animations/hrMotion";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Gestión de RRHH y Planillas | Acentra',
+  description: 'Gestión integral de planillas (D.L. 728), T-Registro, liquidaciones y cumplimiento Sunafil. Tranquilidad legal y operativa para tu empresa.',
+  keywords: ['gestion de planillas', 'recursos humanos', 'sunafil', 't-registro', 'liquidación de beneficios'],
+};
 
 const BLOCKS_DATA = [
   {
