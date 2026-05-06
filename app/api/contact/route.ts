@@ -10,21 +10,32 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Faltan campos obligatorios' }, { status: 400 });
     }
 
-    const transporter = nodemailer.createTransport({
+    // Debug logging (masking sensitive data)
+    console.log('SMTP Attempt:', {
       host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT),
+      port: process.env.SMTP_PORT,
+      hasUser: !!process.env.SMTP_USER,
+      hasPass: !!process.env.SMTP_PASS,
+      receiver: process.env.CONTACT_RECEIVER_EMAIL
+    });
+
+    const transporter = nodemailer.createTransport({
+      host: process.env.SMTP_HOST || 'smtp-relay.brevo.com',
+      port: Number(process.env.SMTP_PORT) || 587,
       secure: process.env.SMTP_SECURE === 'true',
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
       },
-      // Added for port 587 compatibility
-      requireTLS: Number(process.env.SMTP_PORT) === 587,
+      tls: {
+        // Do not fail on invalid certs
+        rejectUnauthorized: false
+      }
     });
 
     const mailOptions = {
-      from: `"Acentra Web" <${process.env.CONTACT_RECEIVER_EMAIL}>`, 
-      to: process.env.CONTACT_RECEIVER_EMAIL,
+      from: `"Acentra Web" <${process.env.CONTACT_RECEIVER_EMAIL || 'contacto@acentraperu.com'}>`, 
+      to: process.env.CONTACT_RECEIVER_EMAIL || 'contacto@acentraperu.com',
       replyTo: email,
       subject: `Nueva solicitud de diagnóstico de ${nombre} - ${empresa || 'Empresa no especificada'}`,
       text: `
