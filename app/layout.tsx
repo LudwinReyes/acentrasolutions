@@ -40,9 +40,7 @@ export const metadata: Metadata = {
     title: 'Acentra - Soluciones Corporativas de Élite',
     description: 'Optimizamos y escalamos empresas con soluciones corporativas de élite.',
   },
-  icons: {
-    icon: '/img/acentra/preloader.png',
-  },
+
 };
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
