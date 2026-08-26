@@ -24,9 +24,20 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'https://acentraperu.com'),
   title: {
     default: 'Acentra | Consultoría Empresarial en Perú: Contabilidad, Software y RRHH',
-    template: '%s | Acentra'
+    template: '%s'
   },
   description: 'Firma líder en Perú especializada en Contabilidad NIIF, Desarrollo de Software a Medida con Inteligencia Artificial y Outsourcing de Planillas y Gestión de RRHH.',
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon.png', type: 'image/png', sizes: '512x512' },
+      { url: '/icon.png', type: 'image/png', sizes: '512x512' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    shortcut: ['/favicon.ico'],
+  },
   keywords: [
     'consultoria corporativa peru',
     'contabilidad niif peru',
@@ -91,6 +102,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="es" className={montserrat.variable}>
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <JsonLd data={[ORGANIZATION_SCHEMA, WEBSITE_SCHEMA]} />
       </head>
       <body className="font-sans antialiased bg-background-light min-h-screen text-slate-900" suppressHydrationWarning>
