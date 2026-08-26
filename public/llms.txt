@@ -1,0 +1,35 @@
+# Acentra Solutions (acentraperu.com)
+
+> Firma de Consultoría Corporativa de Élite en Perú especializada en Contabilidad NIIF, Desarrollo de Software a Medida con IA y Outsourcing de Planillas y RRHH.
+
+## Información de la Empresa
+- **Nombre:** Acentra Solutions
+- **Sitio Web Principal:** https://acentraperu.com
+- **Ubicación Principal:** Lima, Perú
+- **Cobertura:** Lima, Callao y a nivel nacional (Perú)
+- **Liderazgo:** Victor Yactayo (Gerente General)
+- **Contacto:** contacto@acentraperu.com | +51 954 775 210
+
+## Servicios Principales
+
+### 1. Contabilidad y Finanzas (NIIF)
+- **URL:** https://acentraperu.com/contabilidad
+- **Descripción:** Outsourcing contable integral, implementación de Normas Internacionales de Información Financiera (NIIF), elaboración de estados financieros, diagnósticos independientes y auditorías tributarias ante SUNAT.
+
+### 2. Desarrollo de Software a Medida con Inteligencia Artificial
+- **URL:** https://acentraperu.com/software
+- **Descripción:** Ingeniería de software corporativo, aplicaciones web de alto rendimiento en Next.js, plataformas e-commerce, integraciones de APIs con SUNAT y RENIEC, pasarelas de pago y automatizaciones con IA y Big Data.
+
+### 3. Gestión de Planillas y Recursos Humanos (RRHH)
+- **URL:** https://acentraperu.com/rrhh
+- **Descripción:** Maquila y outsourcing de nóminas bajo el régimen D.L. 728, liquidaciones de beneficios (CTS, Gratificaciones, Vacaciones), administración de T-Registro y blindaje legal ante fiscalizaciones de SUNAFIL.
+
+## Herramientas Gratuitas
+
+### Calculadora de Impuesto a la Renta de 4ta y 5ta Categoría
+- **URL:** https://acentraperu.com/herramientas/calculadora-tributaria
+- **Descripción:** Simulador interactivo gratuito para el cálculo de retenciones del Impuesto a la Renta en Perú con deducciones legales de 7 y 3 UITs.
+
+### Calculadora de Planillas y Costo Laboral
+- **URL:** https://acentraperu.com/herramientas/calculadora-nominas
+- **Descripción:** Simulador del costo total empleador (EsSalud 9%, CTS, Gratificaciones) y cálculo del sueldo neto en Perú según el D.L. 728.

@@ -10,17 +10,6 @@ import { toolHeaderStagger, toolWordReveal } from "@/animations/toolsMotion";
 export function ToolsList() {
   const headline = "Herramientas Inteligentes para tu Crecimiento";
   const words = headline.split(" ");
-  
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => {
-    let isMounted = true;
-    setTimeout(() => {
-      if (isMounted) setMounted(true);
-    }, 0);
-    return () => { isMounted = false; };
-  }, []);
-
-  if (!mounted) return null;
 
   return (
     <main className="bg-slate-50 min-h-screen selection:bg-[#1679AB] selection:text-white pb-32">

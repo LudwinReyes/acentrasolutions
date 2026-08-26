@@ -25,8 +25,7 @@ export function PayrollCalculator() {
   const [tieneAsignacion, setTieneAsignacion] = useState<boolean>(false);
   const [sistemaPension, setSistemaPension] = useState<'ONP' | 'AFP'>('AFP');
   useEffect(() => {
-    const t = setTimeout(() => setMounted(true), 0);
-    return () => clearTimeout(t);
+    setMounted(true);
   }, []);
   const result = calculatePayroll({
     sueldoBase: parseFloat(sueldoBase.replace(/[^0-9.]/g, "")) || 0,
@@ -34,8 +33,6 @@ export function PayrollCalculator() {
     tieneAsignacionFamiliar: tieneAsignacion,
     sistemaPension: sistemaPension
   });
-
-  if (!mounted) return null;
 
   return (
     <main className="bg-slate-50 dark:bg-[#0A132B] min-h-screen selection:bg-[#1679AB] selection:text-white pb-32 transition-colors duration-500 overflow-hidden relative font-sans">
@@ -361,7 +358,66 @@ export function PayrollCalculator() {
         </div>
       </section>
 
-      <MagneticFooter />
+      {/* SEO Educational & FAQ Section */}
+      <section className="relative w-full bg-white dark:bg-[#070e20] py-20 px-6 lg:px-8 border-t border-slate-200 dark:border-white/5 z-10">
+        <div className="max-w-5xl mx-auto flex flex-col gap-12">
+          
+          <div>
+            <span className="text-secondary font-bold text-sm tracking-widest uppercase mb-2 inline-block">
+              Guía Laboral Perú D.L. 728
+            </span>
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white leading-tight">
+              ¿Cómo se calcula el Costo Total Empleador y el Sueldo Neto en Perú?
+            </h2>
+            <p className="text-slate-600 dark:text-slate-300 font-light text-lg mt-3">
+              En el Régimen Laboral General de la actividad privada en Perú, el costo de un trabajador supera el sueldo bruto debido a las cargas sociales obligatorias de ley.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-slate-50 dark:bg-white/5 p-6 rounded-2xl border border-slate-100 dark:border-white/10">
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">1. Aportes Empleador (EsSalud)</h3>
+              <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                El empleador debe abonar obligatoriamente el 9% de la remuneración computable a EsSalud (o EPS en proporción), sin descontar del sueldo del trabajador.
+              </p>
+            </div>
+            <div className="bg-slate-50 dark:bg-white/5 p-6 rounded-2xl border border-slate-100 dark:border-white/10">
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">2. Beneficios Sociales</h3>
+              <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                Incluyen Gratificaciones (1 sueldo en Julio y 1 en Diciembre + Bonificación Extraordinaria del 9%), CTS (1 sueldo al año depositado en mayo y noviembre) y 30 días de vacaciones pagadas.
+              </p>
+            </div>
+            <div className="bg-slate-50 dark:bg-white/5 p-6 rounded-2xl border border-slate-100 dark:border-white/10">
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">3. Retenciones al Trabajador</h3>
+              <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                Se descuenta el sistema de pensiones (ONP 13% o AFP ~12.5% a 13.5%) más el Impuesto a la Renta de 5ta categoría cuando el ingreso anual proyectado supere las 7 UIT.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-slate-50 dark:bg-white/5 p-8 rounded-3xl border border-slate-100 dark:border-white/10 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-1">
+                ¿Buscas optimizar la maquila de nóminas de tu empresa?
+              </h3>
+              <p className="text-slate-600 dark:text-slate-300 text-sm">
+                En Acentra gestionamos tus planillas con precisión matemática, soporte continuo y cero margen de error ante Sunafil.
+              </p>
+            </div>
+            <Link 
+              href="/rrhh" 
+              className="px-6 py-3 bg-secondary text-white font-bold rounded-full hover:bg-primary transition-colors text-sm whitespace-nowrap shadow-md"
+            >
+              Conocer Servicio de RRHH
+            </Link>
+          </div>
+
+        </div>
+      </section>
+
+      <div className="mt-16">
+        <MagneticFooter />
+      </div>
     </main>
   );
 }

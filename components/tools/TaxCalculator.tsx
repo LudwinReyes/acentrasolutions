@@ -27,9 +27,7 @@ export function TaxCalculator() {
 
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
-    let isMounted = true;
-    setTimeout(() => { if (isMounted) setMounted(true); }, 0);
-    return () => { isMounted = false; };
+    setMounted(true);
   }, []);
 
   const valBruto = parseFloat(bruto.replace(/[^0-9.]/g, '')) || 0;
@@ -42,8 +40,6 @@ export function TaxCalculator() {
     ...(results.aportesLey > 0 ? [{ name: "Aportes Ley", value: results.aportesLey, color: "#64748b" }] : []),
     { name: "Impuesto a la Renta", value: results.impuestoTotal, color: "#F43F5E" },
   ];
-
-  if (!mounted) return null;
 
   return (
     <main className="bg-slate-50 dark:bg-[#102C57] min-h-screen selection:bg-[#1679AB] selection:text-white pb-32 transition-colors duration-500 overflow-hidden relative">
@@ -314,30 +310,36 @@ export function TaxCalculator() {
               animate="show"
               className="mt-4 h-48 w-full relative z-10 flex items-center justify-center"
             >
-              <ResponsiveContainer width="100%" height="100%">
-                <PieChart>
-                  <Tooltip 
-                    contentStyle={{ borderRadius: '1rem', border: 'none', backgroundColor: '#1e293b', color: '#fff', fontSize: '14px', fontWeight: 'bold' }} 
-                    itemStyle={{ color: '#fff' }} 
-                    formatter={(value: any) => new Intl.NumberFormat('es-PE', { style: 'currency', currency: selectedCountry.currency, maximumFractionDigits: 0 }).format(Number(value) || 0)}
-                  />
-                  <Pie
-                    data={chartData}
-                    cx="50%"
-                    cy="50%"
-                    innerRadius={60}
-                    outerRadius={85}
-                    paddingAngle={5}
-                    dataKey="value"
-                    stroke="none"
-                    cornerRadius={10}
-                  >
-                    {chartData.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={entry.color} />
-                    ))}
-                  </Pie>
-                </PieChart>
-              </ResponsiveContainer>
+              {mounted ? (
+                <ResponsiveContainer width="100%" height="100%">
+                  <PieChart>
+                    <Tooltip 
+                      contentStyle={{ borderRadius: '1rem', border: 'none', backgroundColor: '#1e293b', color: '#fff', fontSize: '14px', fontWeight: 'bold' }} 
+                      itemStyle={{ color: '#fff' }} 
+                      formatter={(value: any) => new Intl.NumberFormat('es-PE', { style: 'currency', currency: selectedCountry.currency, maximumFractionDigits: 0 }).format(Number(value) || 0)}
+                    />
+                    <Pie
+                      data={chartData}
+                      cx="50%"
+                      cy="50%"
+                      innerRadius={60}
+                      outerRadius={85}
+                      paddingAngle={5}
+                      dataKey="value"
+                      stroke="none"
+                      cornerRadius={10}
+                    >
+                      {chartData.map((entry, index) => (
+                        <Cell key={`cell-${index}`} fill={entry.color} />
+                      ))}
+                    </Pie>
+                  </PieChart>
+                </ResponsiveContainer>
+              ) : (
+                <div className="h-full w-full flex items-center justify-center text-slate-400 text-sm">
+                  Cargando gráfico...
+                </div>
+              )}
               <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
                 <span className="text-white/50 text-xs font-bold uppercase tracking-widest">Tasa Efectiva</span>
                 <span className="text-white font-black text-xl">{(results.tasaEfectiva * 100).toFixed(1)}%</span>
@@ -349,7 +351,64 @@ export function TaxCalculator() {
         </motion.div>
       </section>
 
-      <div className="mt-32">
+      {/* SEO Educational & FAQ Section */}
+      <section className="relative w-full bg-white dark:bg-[#0c1e3d] py-20 px-6 lg:px-8 border-t border-slate-200 dark:border-white/5 z-10">
+        <div className="max-w-5xl mx-auto flex flex-col gap-12">
+          
+          <div>
+            <span className="text-secondary font-bold text-sm tracking-widest uppercase mb-2 inline-block">
+              Guía Tributaria Perú 2025 / 2026
+            </span>
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white leading-tight">
+              ¿Cómo se calcula el Impuesto a la Renta de 4ta y 5ta Categoría en Perú?
+            </h2>
+            <p className="text-slate-600 dark:text-slate-300 font-light text-lg mt-3">
+              El cálculo del Impuesto a la Renta para personas naturales en Perú se rige por la escala progresiva acumulativa de la SUNAT sobre la Unidad Impositiva Tributaria (UIT).
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-slate-50 dark:bg-white/5 p-6 rounded-2xl border border-slate-100 dark:border-white/10">
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">1. Deducción Legal de 7 UIT</h3>
+              <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                Los trabajadores en planilla (5ta categoría) tienen derecho a una deducción automática de 7 UITs sobre sus ingresos anuales brutos proyectados.
+              </p>
+            </div>
+            <div className="bg-slate-50 dark:bg-white/5 p-6 rounded-2xl border border-slate-100 dark:border-white/10">
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">2. Gastos Deducibles (Hasta 3 UIT)</h3>
+              <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                Puedes deducir hasta 3 UIT adicionales por consumos sustentados con boleta electrónica en restaurantes, hoteles, bares, servicios profesionales y aportes a EsSalud de trabajadoras del hogar.
+              </p>
+            </div>
+            <div className="bg-slate-50 dark:bg-white/5 p-6 rounded-2xl border border-slate-100 dark:border-white/10">
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">3. Escala Progresiva de Tasas</h3>
+              <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                La renta neta imponible se grava por tramos: hasta 5 UIT al 8%, de 5 a 20 UIT al 14%, de 20 a 35 UIT al 17%, de 35 a 45 UIT al 20%, y más de 45 UIT al 30%.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-slate-50 dark:bg-white/5 p-8 rounded-3xl border border-slate-100 dark:border-white/10 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-1">
+                ¿Necesitas asesoría contable y planificación tributaria personalizada?
+              </h3>
+              <p className="text-slate-600 dark:text-slate-300 text-sm">
+                Nuestros especialistas tributarios te ayudan a optimizar la carga fiscal de tu empresa dentro del marco de la ley.
+              </p>
+            </div>
+            <Link 
+              href="/contacto" 
+              className="px-6 py-3 bg-secondary text-white font-bold rounded-full hover:bg-primary transition-colors text-sm whitespace-nowrap shadow-md"
+            >
+              Consultar con un Experto
+            </Link>
+          </div>
+
+        </div>
+      </section>
+
+      <div className="mt-16">
         <MagneticFooter />
       </div>
     </main>

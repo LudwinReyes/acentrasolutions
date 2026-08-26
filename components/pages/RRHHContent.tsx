@@ -182,6 +182,90 @@ export function RRHHContent() {
         </motion.div>
       </section>
 
+      {/* SEO Authority & FAQ Section */}
+      <section className="relative w-full bg-white py-24 px-6 lg:px-8 border-t border-slate-100 z-10">
+        <div className="max-w-5xl mx-auto flex flex-col gap-16">
+          
+          <div className="text-center">
+            <span className="text-secondary font-bold text-sm tracking-widest uppercase mb-3 inline-block">
+              Preguntas Frecuentes & Cumplimiento Laboral
+            </span>
+            <h2 className="text-3xl md:text-5xl font-black text-slate-900 leading-tight">
+              Gestión de Planillas y Blindaje Laboral en Perú
+            </h2>
+            <p className="text-slate-600 text-lg md:text-xl font-light mt-4 max-w-2xl mx-auto">
+              Claridad absoluta en el cálculo de nóminas, obligaciones mensuales D.L. 728 y fiscalizaciones de Sunafil.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 flex flex-col justify-between">
+              <div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">
+                  ¿Qué incluye el servicio de maquila y outsourcing de planillas?
+                </h3>
+                <p className="text-slate-600 font-light leading-relaxed">
+                  Asumimos el ciclo completo: altas y bajas en T-Registro, cálculo de haberes, horas extras, bonos, descuentos de ley (AFP/ONP, 5ta categoría), aportes de EsSalud, emisión de boletas digitales y generación de archivos bancarios para pagos masivos.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 flex flex-col justify-between">
+              <div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">
+                  ¿Cómo protege Acentra a mi empresa frente a inspecciones de Sunafil?
+                </h3>
+                <p className="text-slate-600 font-light leading-relaxed">
+                  Auditamos la documentación laboral obligatoria (contratos, registros de asistencia, constancias de entrega de boletas y depósitos de CTS), gestionamos el casillero electrónico de Sunafil y redactamos descargos técnicos ante requerimientos de información.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 flex flex-col justify-between">
+              <div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">
+                  ¿Cómo se calculan los beneficios de CTS, Gratificaciones y Liquidaciones?
+                </h3>
+                <p className="text-slate-600 font-light leading-relaxed">
+                  Aplicamos fórmulas matemáticas estrictas de acuerdo al régimen laboral de su empresa, calculando provisiones mensuales exactas para evitar desbalances imprevistos en el flujo de caja en mayo, julio, noviembre y diciembre.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 flex flex-col justify-between">
+              <div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">
+                  ¿Deseas calcular el costo real de un colaborador en planilla?
+                </h3>
+                <p className="text-slate-600 font-light leading-relaxed mb-4">
+                  Prueba nuestro simulador interactivo para conocer el desglose exacto entre el sueldo bruto, sueldo neto y el costo total empleador en el Régimen General peruano.
+                </p>
+                <Link 
+                  href="/herramientas/calculadora-nominas" 
+                  className="text-secondary font-bold hover:underline inline-flex items-center gap-2"
+                >
+                  Probar Calculadora de Nóminas &rarr;
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-primary/5 rounded-3xl p-8 md:p-10 border border-primary/10 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-2">¿Quieres delegar la gestión de planillas con total tranquilidad?</h3>
+              <p className="text-slate-600 font-light text-base md:text-lg">Nos encargamos de toda la complejidad operativa para que te enfoques en liderar a tu equipo.</p>
+            </div>
+            <Link 
+              href="/contacto" 
+              className="px-8 py-4 bg-primary text-white font-bold rounded-full hover:bg-secondary transition-colors whitespace-nowrap shadow-lg shadow-primary/20"
+            >
+              Solicitar Cotización de Planillas
+            </Link>
+          </div>
+
+        </div>
+      </section>
+
       {/* Magnetic Footer */}
       <MagneticFooter />
     </main>

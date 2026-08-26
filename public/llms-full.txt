@@ -1,0 +1,52 @@
+# Acentra Solutions — Información Completa de la Empresa y Portafolio
+
+## Identidad Corporativa
+- **Razón / Marca:** Acentra Solutions (Acentra)
+- **Portal Oficial:** https://acentraperu.com
+- **Sede:** Lima, Perú (Operaciones en Lima, Callao y provincias)
+- **Director General:** Victor Yactayo
+- **Correo Electrónico:** contacto@acentraperu.com
+- **Líneas de Atención:** +51 954 775 210 / +51 943 506 639
+
+## Misión y Filosofía
+Acentra es una firma de consultoría y desarrollo tecnológico de alto impacto que ayuda a empresas medianas y grandes en Perú a blindar su cumplimiento legal, optimizar su rentabilidad y modernizar su infraestructura operativa mediante tecnología e inteligencia artificial.
+
+## Catálogo Detallado de Soluciones
+
+### División 1: Contabilidad y Consultoría Financiera (NIIF)
+- Consultoría en contabilidad financiera y tributaria (NIIF).
+- Elaboración y análisis de estados financieros auditables.
+- Diagnóstico financiero independiente bajo normas NIA y NIIF.
+- Auditorías internas y control de riesgos de fraude.
+- Diagnóstico y optimización de flujos de cierre contable.
+- Outsourcing contable y financiero completo para empresas en Lima y provincias.
+- Reestructuración empresarial y due diligence financiero.
+- Capacitación in-house para directores y gerentes de finanzas.
+
+### División 2: Ingeniería de Software a Medida e Inteligencia Artificial
+- Desarrollo de plataformas web corporativas y aplicaciones SaaS.
+- Sistemas a medida para gestión interna, inventarios, delivery y reservas.
+- Integración de APIs con SUNAT (Facturación electrónica, validador de comprobantes).
+- Integración de APIs con RENIEC (Validación biométrica y de identidad).
+- Integración de pasarelas de pago peruanas e internacionales (Niubiz, Culqi, Stripe, Mercado Pago).
+- Consultoría estratégica en transformación digital y modernización de TI.
+- Despliegue y personalización de CRMs (HubSpot, Salesforce).
+- Automatizaciones avanzadas y asistentes virtuales con Inteligencia Artificial generativa.
+- Tiendas virtuales de comercio electrónico (E-commerce) de alta conversión.
+- Soluciones de Big Data y cuadros de mando en tiempo real (Power BI, Looker).
+
+### División 3: Gestión de Recursos Humanos, Planillas y Sunafil
+- Elaboración mensual de planillas bajo el régimen D.L. N° 728.
+- Cálculo de horas extras, bonificaciones ordinarias y extraordinarias.
+- Generación de archivos TXT para abonos masivos en bancos peruanos (BCP, BBVA, Interbank, Scotiabank).
+- Emisión de boletas de pago digitales con firma electrónica.
+- Provisiones mensuales de beneficios sociales (Vacaciones, CTS, Gratificaciones).
+- Declaración y pago puntual de AFPnet y tributos de planilla (PLAME, Essalud, 4ta y 5ta categoría).
+- Gestión integral de T-Registro (Altas, modificaciones y bajas inmediatas).
+- Liquidaciones de Beneficios Sociales (LBS) y entrega de certificados de trabajo.
+- Administración y respuesta técnica a requerimientos en el casillero virtual de SUNAFIL.
+- Recupero de subsidios por incapacidad temporal y maternidad ante EsSalud.
+
+## Suite de Herramientas Gratuitas para Empresas
+1. **Calculadora de Impuesto a la Renta de 4ta y 5ta Categoría:** https://acentraperu.com/herramientas/calculadora-tributaria
+2. **Calculadora de Planillas y Costo Laboral:** https://acentraperu.com/herramientas/calculadora-nominas

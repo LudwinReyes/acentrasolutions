@@ -193,6 +193,76 @@ export function SoftwareContent() {
         </motion.div>
       </section>
 
+      {/* SEO Authority & FAQs in Dark Aesthetic */}
+      <section className="relative w-full py-24 px-6 lg:px-8 bg-[#030914] border-t border-white/5 z-10">
+        <div className="max-w-5xl mx-auto flex flex-col gap-16">
+          
+          <div className="text-center">
+            <span className="text-secondary font-bold text-sm tracking-widest uppercase mb-3 inline-block font-mono">
+              // PREGUNTAS FRECUENTES & CONSULTORÍA TECH
+            </span>
+            <h2 className="text-3xl md:text-5xl font-black text-white leading-tight">
+              Ingeniería de Software a Medida en Lima y Perú
+            </h2>
+            <p className="text-slate-400 text-lg md:text-xl font-light mt-4 max-w-2xl mx-auto">
+              Respuestas directas sobre tiempos de entrega, tecnologías modernas y casos de éxito en desarrollo web y automatización.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white/5 p-8 rounded-3xl border border-white/10 backdrop-blur-md">
+              <h3 className="text-xl font-bold text-white mb-3">
+                ¿Qué tipo de software a medida desarrolla Acentra en Perú?
+              </h3>
+              <p className="text-slate-400 font-light leading-relaxed">
+                Desarrollamos sistemas ERP y CRM a medida, plataformas web de alta disponibilidad en Next.js, aplicaciones de comercio electrónico (E-commerce), portales de clientes, plataformas SaaS y aplicaciones móviles nativas y multiplataforma.
+              </p>
+            </div>
+
+            <div className="bg-white/5 p-8 rounded-3xl border border-white/10 backdrop-blur-md">
+              <h3 className="text-xl font-bold text-white mb-3">
+                ¿Realizan integraciones con APIs de SUNAT, RENIEC y pasarelas de pago?
+              </h3>
+              <p className="text-slate-400 font-light leading-relaxed">
+                Sí. Contamos con amplia experiencia conectando sistemas corporativos con facturación electrónica SUNAT, validación de DNI/RUC en RENIEC, pasarelas de pago (Niubiz, Culqi, Mercado Pago, Stripe) y sincronización con ERPs tradicionales.
+              </p>
+            </div>
+
+            <div className="bg-white/5 p-8 rounded-3xl border border-white/10 backdrop-blur-md">
+              <h3 className="text-xl font-bold text-white mb-3">
+                ¿Cómo incorporan Inteligencia Artificial en los sistemas?
+              </h3>
+              <p className="text-slate-400 font-light leading-relaxed">
+                Integramos modelos de lenguaje (LLMs), agentes autónomos de atención y cotización, automatización de extracción documental con OCR inteligente y motores predictivos para inventarios y proyecciones comerciales.
+              </p>
+            </div>
+
+            <div className="bg-white/5 p-8 rounded-3xl border border-white/10 backdrop-blur-md">
+              <h3 className="text-xl font-bold text-white mb-3">
+                ¿Cuál es la metodología y tiempo de entrega de un proyecto?
+              </h3>
+              <p className="text-slate-400 font-light leading-relaxed">
+                Trabajamos bajo marcos ágiles (Scrum/Kanban) con sprints quincenales, entregables funcionales desde la fase temprana y código limpio con pruebas automatizadas y soporte post-lanzamiento continuo.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-r from-primary/30 to-secondary/20 rounded-3xl p-8 md:p-10 border border-secondary/20 flex flex-col md:flex-row items-center justify-between gap-6 backdrop-blur-md">
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-2 font-mono">¿Tienes un proyecto de software en mente?</h3>
+              <p className="text-slate-300 font-light text-base md:text-lg">Diseñamos la arquitectura técnica ideal para escalar tu negocio sin límites tecnológicos.</p>
+            </div>
+            <Link 
+              href="/contacto" 
+              className="px-8 py-4 bg-secondary text-white font-bold rounded-full hover:bg-white hover:text-primary transition-colors whitespace-nowrap shadow-lg shadow-secondary/30"
+            >
+              Cotizar Proyecto
+            </Link>
+          </div>
+
+        </div>
+      </section>
+
       {/* The Magnetic Footer handles dark/light seamlessly */}
       <MagneticFooter />
       

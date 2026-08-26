@@ -219,6 +219,90 @@ export function ContabilidadContent() {
         </div>
       </section>
 
+      {/* SEO Authority & FAQ Section */}
+      <section className="relative w-full bg-white py-24 px-6 lg:px-8 border-t border-slate-100">
+        <div className="max-w-5xl mx-auto flex flex-col gap-16">
+          
+          <div className="text-center">
+            <span className="text-secondary font-bold text-sm tracking-widest uppercase mb-3 inline-block">
+              Preguntas Frecuentes & Asesoría Especializada
+            </span>
+            <h2 className="text-3xl md:text-5xl font-black text-slate-900 leading-tight">
+              Resolviendo las Dudas Clave sobre Contabilidad y NIIF en Perú
+            </h2>
+            <p className="text-slate-600 text-lg md:text-xl font-light mt-4 max-w-2xl mx-auto">
+              Información estratégica para directores y gerentes financieros que buscan certidumbre legal y tributaria.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 flex flex-col justify-between">
+              <div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">
+                  ¿Por qué tercerizar con un servicio de Outsourcing Contable en Lima?
+                </h3>
+                <p className="text-slate-600 font-light leading-relaxed">
+                  Tercerizar con Acentra reduce hasta un 40% en costos operativos frente a un departamento contable interno, eliminando multas de SUNAT, garantizando cierres mensuales puntuales y blindando los libros electrónicos con las últimas resoluciones tributarias vigentes.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 flex flex-col justify-between">
+              <div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">
+                  ¿Cómo ayuda Acentra con la adopción y aplicación de Normas NIIF?
+                </h3>
+                <p className="text-slate-600 font-light leading-relaxed">
+                  Realizamos diagnósticos de brechas NIIF completas, evaluamos el impacto en el patrimonio y estructuramos estados financieros auditables que incrementan la credibilidad de su empresa ante entidades bancarias, inversionistas y socios internacionales.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 flex flex-col justify-between">
+              <div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">
+                  ¿Qué incluye la auditoría y diagnóstico tributario preventivo?
+                </h3>
+                <p className="text-slate-600 font-light leading-relaxed">
+                  Examinamos transacciones clave, detracciones, percepciones, retenciones y compras para identificar contingencias antes de una fiscalización de SUNAT, optimizando el escudo fiscal legal de su organización.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 flex flex-col justify-between">
+              <div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">
+                  ¿Cómo simular el impacto tributario de mi empresa?
+                </h3>
+                <p className="text-slate-600 font-light leading-relaxed mb-4">
+                  Hemos desarrollado herramientas interactivas gratuitas con la normativa peruana vigente para proyectar retenciones de Impuesto a la Renta de 4ta y 5ta categoría.
+                </p>
+                <Link 
+                  href="/herramientas/calculadora-tributaria" 
+                  className="text-secondary font-bold hover:underline inline-flex items-center gap-2"
+                >
+                  Probar Calculadora Tributaria Pro &rarr;
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-primary/5 rounded-3xl p-8 md:p-10 border border-primary/10 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-2">¿Necesitas una evaluación contable confidencial?</h3>
+              <p className="text-slate-600 font-light text-base md:text-lg">Analizamos el estado actual de tus finanzas y te brindamos una propuesta adaptada a tu escala operativa.</p>
+            </div>
+            <Link 
+              href="/contacto" 
+              className="px-8 py-4 bg-primary text-white font-bold rounded-full hover:bg-secondary transition-colors whitespace-nowrap shadow-lg shadow-primary/20"
+            >
+              Solicitar Diagnóstico
+            </Link>
+          </div>
+
+        </div>
+      </section>
+
       <MagneticFooter />
     </main>
   );
